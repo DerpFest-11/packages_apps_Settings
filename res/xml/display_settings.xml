@@ -202,7 +202,22 @@
         <ListPreference
             android:key="android.theme.customization.accent_color"
             android:title="@string/theme_customization_accent_color_title"
+            android:dependency="use_wall_accent"
             android:icon="@drawable/ic_accent"/>
+
+        <com.derp.support.preference.SystemSettingSwitchPreference
+            android:key="use_wall_accent"
+            android:disableDependentsState="true"
+            android:title="@string/use_wall_accent_string"
+            android:summary="@string/use_wall_accent_summary"
+            android:defaultValue="false" />
+
+        <com.derp.support.preference.SystemSettingListPreference
+            android:key="auto_accent_type"
+            android:title="@string/auto_accent_picker_title"
+            android:entries="@array/auto_accent_picker_entries"
+            android:entryValues="@array/auto_accent_picker_values" />
+
         <ListPreference
             android:key="android.theme.customization.font"
             android:title="@string/theme_customization_font_title"
